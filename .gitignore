@@ -1,5 +1,6 @@
 mltbenv/*
 config.py
+credentials.json
 token.pickle
 rclone.conf
 .netrc

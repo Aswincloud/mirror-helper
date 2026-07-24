@@ -10,11 +10,8 @@ from ..helper.telegram_helper.bot_commands import BotCommands
 @new_task
 async def start(_, message):
     buttons = ButtonMaker()
-    buttons.url_button(
-        "Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot"
-    )
-    buttons.url_button("Code Owner", "https://t.me/anas_tayyar")
-    reply_markup = buttons.build_menu(2)
+    buttons.url_button("Code Owner", "https://t.me/Aswin4122001")
+    reply_markup = buttons.build_menu(1)
     if await CustomFilters.authorized(_, message):
         start_string = f"""
 This bot can mirror from links|tgfiles|torrents|nzb|rclone-cloud to any rclone cloud, Google Drive or to telegram.
@@ -24,7 +21,11 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
     else:
         await send_message(
             message,
-            "This bot can mirror from links|tgfiles|torrents|nzb|rclone-cloud to any rclone cloud, Google Drive or to telegram.\n\n⚠️ You Are not authorized user! Deploy your own mirror-leech bot",
+            "👋 Welcome!\n"
+    "This bot is here to help you download anything you need — proudly created by Ash!\n\n"
+    "⚠️ Access Denied:\n"
+    "You are not an authorized user.\n"
+    "Please contact my boss, Aswin, for further assistance. 🙏",
             reply_markup,
         )
 
